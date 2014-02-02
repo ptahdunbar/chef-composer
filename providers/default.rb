@@ -4,7 +4,7 @@ action :install do
 	directory new_resource.target_dir do
 		owner new_resource.owner
 		group new_resource.group
-		mode 0755
+		mode 0775
 		recursive true
 	end
 
@@ -12,7 +12,7 @@ action :install do
 		source new_resource.source
 		owner new_resource.owner
 		group new_resource.group
-		mode 0755
+		mode 0775
 
 		action :create_if_missing
 	end
